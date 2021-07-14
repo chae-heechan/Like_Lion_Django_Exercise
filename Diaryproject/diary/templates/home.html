@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Daily Diary {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{%block content %}
+<div class="main-contaioner">
+    <div class="top-decoration">
+        <div class="copy">
+            <p>하루의 한 이야기씩</p>
+            <span>나만의 </span> <span class="brown">DAILY_DIARY</span><span>를 시작해보세요</span>
+        </div>
+        <div class="top-contour">
+            <span class="contour"></span>
+            <span class="top-title">My Story</span>
+            <span class="contour"></span>
+        </div>
+    </div>
+    <div class="diary">
+        <div>
+            {% for story in story1 %}
+                <a href="{% url 'detail' story.id %}">
+                    <div class="contents">
+                        <img src="{{ story.image.url }}" width="300"alt="사진">
+                        <p class="story-title">{{story.title}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div>
+            {% for story in story2 %}
+                <a href="{% url 'detail' story.id %}">
+                    <div class="contents">
+                        <img src="{{ story.image.url }}" width="300"alt="사진">
+                        <p class="story-title">{{story.title}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div>
+            {% for story in story3 %}
+                <a href="{% url 'detail' story.id %}">
+                    <div class="contents">
+                        <img src="{{ story.image.url }}" width="300"alt="사진">
+                        <p class="story-title">{{story.title}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
