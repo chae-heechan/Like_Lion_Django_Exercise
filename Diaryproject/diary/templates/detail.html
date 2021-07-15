@@ -5,13 +5,12 @@
 {% block content %}
 <div class="main-contaioner">
     <div class="">
-        <p>{{story.id}}</p>
-        <p class="detail-title">{{ story.title }}왜안나와</p>
+        <p class="detail-title">{{ story.title }}</p>
         <div class="detail-info">
             <p class="detiail-date">{{story.date}}</p>
             <p class="detail-weather">{{story.weather}}</p>
         </div>
-        <img src="{{ story.image.url }}" width="1000" alt="왜안나오지">
+        <img src="{{ story.image.url }}" width="1000" alt="사진">
         <p class="detail-content">{{story.content}}</p>
     </div>
 </div>

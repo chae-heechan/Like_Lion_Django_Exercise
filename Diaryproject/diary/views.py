@@ -1,5 +1,5 @@
 from django.core import paginator
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from .models import *
 
@@ -13,5 +13,5 @@ def home(request):
     return render(request, 'home.html', {"story1": card1, "story2" : card2, "story3" : card3})
 
 def detail(request, id):
-    story = get_list_or_404(Story, pk=id)
+    story = get_object_or_404(Story, pk=id)
     return render(request, 'detail.html', {'story':story})

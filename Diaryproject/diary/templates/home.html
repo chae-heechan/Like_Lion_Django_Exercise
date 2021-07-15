@@ -18,7 +18,7 @@
     <div class="diary">
         <div>
             {% for story in story1 %}
-                <a href="{% url 'detail' story.id %}">
+                <a class="contents-button" href="{% url 'detail' story.id %}">
                     <div class="contents">
                         <img src="{{ story.image.url }}" width="300"alt="사진">
                         <p class="story-title">{{story.title}}</p>
@@ -28,7 +28,7 @@
         </div>
         <div>
             {% for story in story2 %}
-                <a href="{% url 'detail' story.id %}">
+                <a class="contents-button" href="{% url 'detail' story.id %}">
                     <div class="contents">
                         <img src="{{ story.image.url }}" width="300"alt="사진">
                         <p class="story-title">{{story.title}}</p>
@@ -38,7 +38,7 @@
         </div>
         <div>
             {% for story in story3 %}
-                <a href="{% url 'detail' story.id %}">
+                <a class="contents-button" href="{% url 'detail' story.id %}">
                     <div class="contents">
                         <img src="{{ story.image.url }}" width="300"alt="사진">
                         <p class="story-title">{{story.title}}</p>
